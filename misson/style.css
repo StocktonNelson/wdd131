@@ -1,0 +1,30 @@
+body{
+    border: 1px solid black;
+    margin: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+    text-align:start;
+    padding-left: 10em;
+    padding-right: 10em;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 600px;
+}
+header, header p{
+    text-align:center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+header #sub-title{
+    color: #006EB6;
+    text-decoration: underline;
+}
+ol li{
+    padding: 10px;
+}
+footer{
+    text-align: center;
+    padding: 2em;
+    line-height: 1.5em;
+    size: 150px;
+}
