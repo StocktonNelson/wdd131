@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', Courier, monospace;
+    font-size: 25px;
+}
+
+header,
+main,
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+
+header {
+    background-color: blueviolet;
+    color: white;
+}
+
+header a {
+    padding: 1em;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+main .gallary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+main .gallary section img {
+    color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: blueviolet;
+    font-family: Arial;
+    text-align: center;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* The dropdown container */
+.dropdown {
+    overflow: hidden;
+    display: none;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    background-color: blueviolet;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer{
+    background-color: blueviolet;;
+}
+
+@media screen and (max-width: 720px) {
+
+    main .gallary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .navbar a {
+        display: none; 
+    }
+    
+    .dropdown {
+        display: block; 
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: white;
+        display: block;
+        padding: 12px 16px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    main .gallary {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .navbar a {
+        display: none; 
+    }
+    
+    .dropdown {
+        display: block; 
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: white;
+        display: block;
+        padding: 12px 16px;
+        text-align: center;
+    }
+    
+
+}
