@@ -4,10 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Comic Neue', Courier, monospace;
 }
 
 body {
-    font-family: 'Comic Neue', Courier, monospace;
     font-size: 25px;
 }
 
@@ -114,6 +114,60 @@ img {
 
 footer{
     background-color: blueviolet;;
+}
+
+.viewer{
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    max-height: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.viewer img {
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.close-viewer {
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-viewer:hover {
+    background-color: rgb(98, 25, 167);
+}
+
+.dropbutton {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: blueviolet;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 720px) {
