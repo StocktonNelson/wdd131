@@ -12,8 +12,8 @@ header{
     top:-40px;
 }
 
-.skiptocontent a:focus {
-    top: 0;
+.skiptocontent :focus pseudo-class{
+    top:0
 }
 
 nav {
@@ -47,7 +47,7 @@ main{
 }
 .book_blog {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 12em 1fr 1fr;
     gap: 5em;
 }
 
