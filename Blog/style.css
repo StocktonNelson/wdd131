@@ -12,8 +12,8 @@ header{
     top:-40px;
 }
 
-.skiptocontent :focus pseudo-class{
-    top:0
+.skiptocontent a:focus {
+    top: 0;
 }
 
 nav {

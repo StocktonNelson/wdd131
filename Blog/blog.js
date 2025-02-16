@@ -50,7 +50,7 @@ articles.forEach(article => {
     articleElement.innerHTML = `
         <div class="book">
             <h2>${article.title}</h2>
-            <img src="${article.imgSrc}" alt="${article.imgAlt}" width="300" height="500"/>
+            <img src="${article.imgSrc}" alt="${article.imgAlt}" width="300" height="500" onerror="this.src='placeholder.jpg'"/>
             <p>${article.description}</p>
         </div>
         <div class="info">
