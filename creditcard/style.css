@@ -1,0 +1,156 @@
+/* Basic reset and container styling */
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    width: 340px;
+    height: 200px;
+    padding: 25px;
+    border-radius: 15px;
+    color: white;
+}
+
+.front-card {
+    background: linear-gradient(135deg, #434343, #000000);
+    z-index: 1;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.front-card img {
+    float: right;
+}
+
+.front-card span {
+    position: relative;
+    top: -30px;
+}
+
+.back-card {
+    background: linear-gradient(135deg, #4b4b4b, #1a1a1a);
+    z-index: 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: relative;
+    top: 2em;
+    left: 8em;
+    display: flex;
+    flex-direction: column;
+}
+
+.chip-container {
+    margin-bottom: 40px;
+}
+
+.card-number {
+    margin-bottom: 30px;
+}
+
+.card-number input {
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cardholder {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.exp-inputs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.exp-inputs input {
+    width: 30px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.black-strip {
+    background: #000;
+    height: 40px;
+    margin: 20px 0;
+}
+
+.cvv-container {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: auto; 
+    margin-bottom: 20px; 
+}
+
+.cvv-container input {
+    background: #fff;
+    color: #000;
+    text-align: right;
+    padding-right: 10px;
+    width: 50px;
+}
+
+.cvv-label {
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    align-self: flex-end;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Remove number input spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
