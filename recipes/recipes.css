@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Amatic SC";
+}
+
+body{
+    display: grid;
+    grid-template-rows: 1/2fr 1em 1fr 1fr;
+    text-align: center;
+    max-width: 1200px; /* Prevents extreme stretching */
+    margin: 0 auto; /* Centers the content */
+}
+
+header{
+    grid-row: 1/2;
+    font-family: var(--secondary-font);
+    margin-bottom: 1.5em; /* Add space below the header */
+}
+
+header img{
+    width: 100px;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    padding: 0 5em;
+    position: relative;
+    margin-bottom: 2em; /* Add space below the nav */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--text-dark);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.search-container::after {
+    content: '';
+    position: absolute;
+    bottom: -2em; /* Position it below the search container */
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: #ccc; /* Light gray line */
+    margin: 0 auto;
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: var(--primary-font);
+}
+
+#search-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-left: 1px solid var(--text-dark); /* This creates a divider line */
+}
+
+.search-button img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+main{
+    grid-row: 3/4;
+    padding-top: 1em; /* Add some padding at the top of main content */
+}
+
+main img{
+    width: 500px;
+    max-width: 100%; /* Ensures responsive behavior */
+}
+
+section{
+    display: flex;
+    gap: 1em;
+    border: 5px solid black;
+    padding: 1em;
+    text-align: start;
+    max-width: 1000px; /* Maximum width for the section */
+    margin: 0 auto; /* Centers the section */
+}
+
+.food-title h2 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 40px;
+    padding: 0;
+    line-height: 0.01;
+}
+
+.tags{
+    display: inline-flex;
+    border: 2px solid black;
+    margin: 0;
+    padding: 2px 8px;
+    line-height: 0.01;
+    font-size: 18px;
+}
+
+footer{
+    padding-top: 4em;
+    grid-row: 4/5;
+    display: flex;
+    gap: 1em;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+footer .social-media{
+    display: flex;
+    justify-content: flex-start; /* Aligns icons to the right within their container */
+}
+
+footer .social-media a {
+    margin: 0 5px;
+}
+
+footer .social-media a img {
+    width: 75px;
+}
+
+.brief-text {
+    white-space: nowrap; /* Keeps text on one line */
+    overflow: hidden; /* Hides overflow */
+    text-overflow: ellipsis; /* Adds ... if text is too long */
+    max-width: 400px; /* Adjust this value as needed */
+    max-height: 3em; /* Approximately 2-3 lines */
+    line-height: 1.5;
+}
+
+.description {
+    max-width: 500px; /* Adjust as needed */
+    flex: 1;
+}
+
+@media screen and (max-width: 720px) {
+
+    header{
+        font-size: 30px;
+    }
+
+    section {
+        display: grid;
+        grid-template-rows: auto auto;
+        padding: 0.5em;
+        border-width: 3px;
+        gap: 1em;
+    }
+
+    /* Place image container in first row taking full width */
+    .image-holder {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+    
+    /* Place all description content below the image */
+    .description {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        padding: 0.5em;
+        font-size: 30px;
+    }
+    
+    main img {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Hide brief description text on mobile */
+    .breif-text {
+        display: none;
+    }
+    
+    .food-title h2 {
+        text-align: start;
+        margin-top: 0.5em;
+        line-height: normal;
+        line-height: 0.01;
+        font-size: 50px;
+    }
+    
+    .tags {
+        padding: 1px 6px;
+        display: inline-block;
+        margin: 0.5em 0;
+        font-weight: bold;
+    }
+    
+    footer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Tighten spacing */
+    body {
+        grid-template-rows: auto auto auto auto;
+    }
+    
+    header {
+        margin-bottom: 1em;
+    }
+    
+    nav {
+        margin-bottom: 1em;
+        padding: 0 2em;
+    }
+}

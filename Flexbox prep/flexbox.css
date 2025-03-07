@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 20px;
+    max-width: 1280px;
+    margin: auto;
+    padding: 1em;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+.main-nav{
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  
+}
+
+.main-nav li{
+  flex: 0 1 5em;
+  text-align: center;
+}
+
+.media-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  align-items: center; /* This vertically centers items in their grid cells */
+}
+
