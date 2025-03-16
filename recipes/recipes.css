@@ -115,16 +115,31 @@ section{
     color: var(--primary-color);
     font-size: 40px;
     padding: 0;
-    line-height: 0.01;
+    line-height: 1.2; /* Adjust line height to prevent overlap */
+    overflow-wrap: break-word; /* Allow words to break */
+    word-wrap: break-word; /* Legacy support */
+    hyphens: auto; /* Add hyphens when breaking words */
+    max-width: 100%; /* Ensure it stays within parent */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    display: -webkit-box; /* For multi-line ellipsis */
+    -webkit-box-orient: vertical; /* Required for multi-line ellipsis */
 }
 
 .tags{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.tag {
+    display: inline-block;
     border: 2px solid black;
-    margin: 0;
     padding: 2px 8px;
-    line-height: 0.01;
-    font-size: 18px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
 }
 
 footer{
@@ -205,8 +220,7 @@ footer .social-media a img {
     .food-title h2 {
         text-align: start;
         margin-top: 0.5em;
-        line-height: normal;
-        line-height: 0.01;
+        line-height: 1.1; /* Adjusted from 0.01 to prevent overlap */
         font-size: 50px;
     }
     
@@ -215,6 +229,11 @@ footer .social-media a img {
         display: inline-block;
         margin: 0.5em 0;
         font-weight: bold;
+    }
+    
+    .tag {
+        font-size: 12px;
+        padding: 1px 6px;
     }
     
     footer{
