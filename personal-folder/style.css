@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #85CB33;
+    --secondary-color: #EFFFC8;
+    --accent1-color: #A5CBC3;
+    --accent2-color: #3B341F;
+
+    /* Dark mode colors */
+    --dark-primary-color: #18230F;
+    --dark-secondary-color: #27391C;
+    --dark-accent1-color: #255F38;
+    --dark-accent2-color: #1F7D53;
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Boldonse";
+    --paragraph-font: "Winky+Sans", Helvetica, sans-serif;
+
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(--primary-color);
+    /* headlines on a white background */
+    --headline-color-on-color: var(--secondary-color);
+    /* headlines on a colored background */
+    --paragraph-color-on-white: var(--primary-color);
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: var(--secondary-color);
+    /* paragraph text on a colored background */
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--secondary-color);
+    --nav-background-color: var(--primary-color);
+    --nav-hover-link-color: var(--primary-color);
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+*{
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+header{
+    background-color: var(--primary-color);
+    display: flex;
+}
+#logo-img img{
+    width: 150px;
+    height: 150px;
+}
+nav {
+    background-color: var(--nav-background-color);
+    display: flex;
+    justify-content: start;
+    text-align: left;
+    align-items: center;
+}
+nav a{
+    padding: 2em;
+}
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--primary-color);
+}
+
+.hero-img img{
+    width: 100%;
+    height: 15em;
+    display: cover;
+}
+main h1{
+    font-size: 2em;
+    font-family: var(--heading-font);
+    padding: 2em;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5em;
+    justify-items: center;
+    align-items: center
+}
+
+.first-section img{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: var(--primary-color) solid 5px;
+    filter: brightness(0.9);
+}
+
+.first-section p,
+.first-section h2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-right: 20em;
+}
+
+.second-section img{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.second-section p,
+.second-section h2{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-left: 20em;
+}
+
+.first-section p,
+.second-section p{
+    position: relative;
+    top: 100px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+social-media {
+    display: flex;
+    gap: 1em;
+}
+
+.social-media a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+social-media a:hover {
+    color: var(--accent1-color);
+    text-decoration: underline;
+}
+
+/*child-index.html */
+.child-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    padding: 2em;
+    gap: 2em; 
+}
+
+.child-section .text-content {
+    grid-column: 1 / 2; 
+    text-align: left;
+}
+
+.child-section img {
+    grid-column: 2 / 3; 
+    width: 30%; 
+    height: auto;
+    border: 2px solid var(--primary-color);
+}
+
+.child-section h2,
+.child-section p {
+    margin: 0.5em 0; /* Reduce spacing between elements */
+    padding-left: 15em;
+}
+
+/* Alot of this was help Github Copoilt for help with alot of error I was having*/
+
+@media (max-width: 1000px) {
+    .child-section {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        grid-template-rows: auto auto; /* Stack rows: image first, text second */
+        text-align: center; /* Center-align content for better appearance */
+    }
+
+    .child-section img {
+        grid-column: 1 / 2; /* Image spans the full width */
+        grid-row: 1 / 2; /* Image appears in the first row */
+        width: 80%; /* Adjust image size for smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .child-section .text-content {
+        grid-column: 1 / 2; /* Text spans the full width */
+        grid-row: 2 / 3; /* Text appears in the second row */
+        padding: 1em; /* Add some padding for spacing */
+    }
+
+    .child-section h2,
+    .child-section p {
+        padding-left: 0; /* Remove left padding for smaller screens */
+        margin: 0.5em 0; /* Keep spacing consistent */
+    }
+
+    .first-section,
+    .second-section {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        grid-template-rows: auto auto; /* Stack rows: image first, text second */
+        text-align: center; /* Center-align content for better appearance */
+        justify-content: center;
+    }
+
+    .first-section img,
+    .second-section img {
+        grid-column: 1 / 2; /* Image spans the full width */
+        grid-row: 1 / 2; /* Image appears in the first row */
+        width: 50%; /* Adjust image size for smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .first-section p,
+    .first-section h2,
+    .second-section p,
+    .second-section h2 {
+        grid-column: 1 / 2; /* Text spans the full width */
+        grid-row: 2 / 3; /* Text appears in the second row */
+        padding: 1em; /* Add some padding for spacing */
+        margin: 0.5em 0; /* Keep spacing consistent */
+    }
+    footer {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center-align footer content */
+        gap: 1em; /* Add spacing between footer elements */
+    }
+
+    footer .social-media {
+        justify-content: center; /* Center social media links */
+        margin-top: 1em; /* Add spacing above social media links */
+    }
+
+    footer p {
+        margin: 0.5em 0; /* Adjust spacing for footer text */
+    }
+    
+    .social-media {
+        justify-content: center; /* Center social media links */
+    }
+}
+
+/* Default (light mode) colors are already defined in :root */
+
+body.dark-mode {
+    --primary-color: var(--dark-primary-color);
+    --secondary-color: var(--dark-secondary-color);
+    --accent1-color: var(--dark-accent1-color);
+    --accent2-color: var(--dark-accent2-color);
+    --headline-color-on-white: var(--dark-primary-color);
+    --headline-color-on-color: var(--dark-secondary-color);
+    --paragraph-color-on-white: var(--dark-primary-color);
+    --paragraph-color-on-color: var(--dark-secondary-color);
+    --nav-link-color: var(--dark-secondary-color);
+    --nav-background-color: var(--dark-primary-color);
+    --nav-hover-link-color: var(--dark-primary-color);
+    --nav-hover-background-color: var(--dark-secondary-color);
+    --paragraph-background-color: var(--dark-primary-color);
+    background-color: var(--dark-primary-color);
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: var(--dark-primary-color);
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode nav a {
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode nav a:hover {
+    background-color: var(--dark-secondary-color);
+    color: var(--dark-primary-color);
+}
