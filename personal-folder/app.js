@@ -17,24 +17,24 @@ const mainPageContent = [
 
 const childPageContent = [
     {
-        title: "Tropical Paradise Restaurant",
-        description: "A delightful dining experience with a fusion of tropical flavors. The ambiance and service were exceptional.",
-        rating: "⭐⭐⭐⭐⭐",
-        img: "https://picsum.photos/200/300",
+        title: "Randbow Drive-in",
+        description: "The place is preety interesting but the food was fine. however, if you get a normal burger then the bun will be 3 times bigger then the patty it self. This make look like just a bun then burger.",
+        rating: "⭐⭐⭐",
+        img: "images/rainbow.webp",
         imgText: "Tropical Paradise Restaurant"
     },
     {
-        title: "Sunset Beach",
-        description: "Watching the sunset at Sunset Beach was a breathtaking experience. The vibrant colors and peaceful waves created a perfect moment.",
-        rating: "⭐⭐⭐⭐",
-        img: "https://picsum.photos/200/300",
+        title: "Gateway Buffet",
+        description: "This is part of the Polynesian Cultural Center and was amazing going in there. The place was very big and has so much food that i can't keep track how much iwas etaing in there. Also the food is very high quility and was made with care in made. Also the first time having desert be made at our table by cheifs that enjoy working there. Must go place in Hawaii.",
+        rating: "⭐⭐⭐⭐⭐",
+        img: "images/gateway-buffet.jpeg",
         imgText: "Sunset Beach"
     },
     {
-        title: "Hiking the Diamond Head Trail",
-        description: "The hike up Diamond Head Trail was challenging but rewarding. The panoramic views from the top were absolutely stunning.",
-        rating: "⭐⭐⭐⭐⭐",
-        img: "https://picsum.photos/200/300",
+        title: "Dole Pineapple Plantaion",
+        description: "When going here to get some dessert, it was the most expensive place to get some ice cream. The food there cost $10 for a small amount of ice cream and $30 for real food. I don't recommend people here for the fun but only explore the history of the place.",
+        rating: "⭐⭐",
+        img: "images/dole-plantation.webp",
         imgText: "Diamond Head Trail"
     }
 ]

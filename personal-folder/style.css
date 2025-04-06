@@ -56,6 +56,8 @@ nav {
 }
 nav a{
     padding: 2em;
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 nav a:hover {
     background-color: var(--nav-hover-background-color);
@@ -153,7 +155,7 @@ social-media a:hover {
 
 .child-section img {
     grid-column: 2 / 3; 
-    width: 30%; 
+    width: 50%; 
     height: auto;
     border: 2px solid var(--primary-color);
 }
